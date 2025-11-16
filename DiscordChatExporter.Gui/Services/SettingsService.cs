@@ -61,7 +61,7 @@ public partial class SettingsService()
     public partial bool LastShouldFormatMarkdown { get; set; } = true;
 
     [ObservableProperty]
-    public partial bool LastShouldDownloadAssets { get; set; }
+    public partial bool LastShouldDownloadAssets { get; set; } = true;
 
     [ObservableProperty]
     public partial bool LastShouldReuseAssets { get; set; }

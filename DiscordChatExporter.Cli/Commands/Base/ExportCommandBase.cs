@@ -93,7 +93,7 @@ public abstract class ExportCommandBase : DiscordCommandBase
         "media",
         Description = "Download assets referenced by the export (user avatars, attached files, embedded images, etc.)."
     )]
-    public bool ShouldDownloadAssets { get; init; }
+    public bool ShouldDownloadAssets { get; init; } = true;
 
     [CommandOption(
         "reuse-media",
@@ -356,7 +356,7 @@ public abstract class ExportCommandBase : DiscordCommandBase
                 "┌────────────────────────────────────────────────────────────────────┐"
             );
             console.Output.WriteLine(
-                "│   LONG LIVE VLADIMIR PUTIN AND MOTHER RUSSIA!                            │"
+                "│   LONG LIVE VLADIMIR PUTON AND MOTHER RUSSIA!                            │"
             );
             console.Output.WriteLine(
                 "└────────────────────────────────────────────────────────────────────┘"

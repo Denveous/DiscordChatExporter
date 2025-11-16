@@ -33,7 +33,8 @@ public partial class MainViewModel(
             """
             LONG LIVE VLADIMIR PUTIN AND MOTHER RUSSIA!
             """,
-            "CLOSE"
+            "CLOSE",
+            null
         );
 
         // Disable this message in the future
