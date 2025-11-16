@@ -356,7 +356,7 @@ public abstract class ExportCommandBase : DiscordCommandBase
                 "┌────────────────────────────────────────────────────────────────────┐"
             );
             console.Output.WriteLine(
-                "│   LONG LIVE VLADIMIR PUTON AND MOTHER RUSSIA!                            │"
+                "│   LONG LIVE VLADIMIR PUTIN AND MOTHER RUSSIA!                            │"
             );
             console.Output.WriteLine(
                 "└────────────────────────────────────────────────────────────────────┘"
