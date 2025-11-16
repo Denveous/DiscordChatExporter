@@ -29,11 +29,6 @@ It works with direct messages, group messages, and server channels, and supports
 - File partitioning, date ranges, message filtering, and other export options
 - Self-contained exports that can be viewed offline
 
-## Screenshots
-
-![channel list](.assets/list.png)
-![rendered output](.assets/output.png)
-
 ## See also
 
 - [**Chat Analytics**](https://github.com/mlomb/chat-analytics) — solution for analyzing chat patterns of Discord users, using exports produced by **DiscordChatExporter**.
