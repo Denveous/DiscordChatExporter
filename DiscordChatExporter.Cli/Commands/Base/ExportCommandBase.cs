@@ -132,13 +132,10 @@ public abstract class ExportCommandBase : DiscordCommandBase
     public bool IsUtcNormalizationEnabled { get; init; } = false;
 
     [CommandOption(
-        "fuck-russia",
-        EnvironmentVariable = "FUCK_RUSSIA",
-        Description = "Don't print the Support Ukraine message to the console.",
-        // Use a converter to accept '1' as 'true' to reuse the existing environment variable
-        Converter = typeof(TruthyBooleanBindingConverter)
+        "no-support-message",
+        Description = "Don't print the support message to the console."
     )]
-    public bool IsUkraineSupportMessageDisabled { get; init; } = false;
+    public bool IsSupportMessageDisabled { get; init; } = false;
 
     [field: AllowNull, MaybeNull]
     protected ChannelExporter Exporter => field ??= new ChannelExporter(Discord);
@@ -352,32 +349,14 @@ public abstract class ExportCommandBase : DiscordCommandBase
 
     public override async ValueTask ExecuteAsync(IConsole console)
     {
-        // Support Ukraine callout
-        if (!IsUkraineSupportMessageDisabled)
+        // Support message
+        if (!IsSupportMessageDisabled)
         {
             console.Output.WriteLine(
                 "┌────────────────────────────────────────────────────────────────────┐"
             );
             console.Output.WriteLine(
-                "│   Thank you for supporting Ukraine <3                              │"
-            );
-            console.Output.WriteLine(
-                "│                                                                    │"
-            );
-            console.Output.WriteLine(
-                "│   As Russia wages a genocidal war against my country,              │"
-            );
-            console.Output.WriteLine(
-                "│   I'm grateful to everyone who continues to                        │"
-            );
-            console.Output.WriteLine(
-                "│   stand with Ukraine in our fight for freedom.                     │"
-            );
-            console.Output.WriteLine(
-                "│                                                                    │"
-            );
-            console.Output.WriteLine(
-                "│   Learn more: https://tyrrrz.me/ukraine                            │"
+                "│   LONG LIVE VLADIMIR PUTON AND MOTHER RUSSIA!                            │"
             );
             console.Output.WriteLine(
                 "└────────────────────────────────────────────────────────────────────┘"
